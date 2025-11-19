@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cookie Manager</h1>
+        
+        <div>
+            <button onclick="setCookie('username', 'Ann Carlos', 30)">Set Cookie</button>
+            <button onclick="showCookie()">Get Cookie</button>
+            <button onclick="checkCookie()">Check Cookie</button>
+        </div>
+        <div id="output"></div>
+    </div>
+
+    <script src="cokie.js"></script>
+    <script>
+        function showCookie() {
+            let user = getCookie("username");
+            let output = document.getElementById('output');
+            if (user != "") {
+                output.innerHTML = "Cookie found: username = " + user;
+            } else {
+                output.innerHTML = "No cookie found";
+            }
+        }
+    </script>
+</body>
+</html>
